@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Date: " + cells[0].textContent + "\n" +
                     "Subject: " + cells[1].textContent + "\n" +
                     "Time: " + cells[2].textContent + "\n" +
-                    "Room: " + cells[3].textContent
+                    "Location: " + cells[3].textContent + "\n" +
+                    "Exam Type: " + cells[4].textContent
                 );
             });
 
@@ -40,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Date: " + cells[0].textContent + "\n" +
                     "Subject: " + cells[1].textContent + "\n" +
                     "Time: " + cells[2].textContent + "\n" +
-                    "Room: " + cells[3].textContent + "\n\n";
+                    "Location: " + cells[3].textContent + "\n" +
+                    "Exam Type: " + cells[4].textContent + "\n\n";
             }
         });
 
