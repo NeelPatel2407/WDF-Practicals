@@ -11,36 +11,52 @@
 
 **Repository:** [WDF-Practicals](https://github.com/NeelPatel2407/WDF-Practicals)
 
-Clone the repository using:
+Clone the repository:
 
 git clone https://github.com/NeelPatel2407/WDF-Practicals.git
 cd WDF-Practicals
 
-## Project Overview
+## 1. Project Overview
 
-CampusCore is a student portal developed as part of the Web Development Frameworks practical course. It brings together frontend web pages, JavaScript interactivity, PHP server-side processing, and MySQL database functionality.
+CampusCore is a student portal developed as part of the Web Development Frameworks practical course. It integrates frontend pages, JavaScript interactivity, PHP server-side processing, and MySQL database operations into a single web application.
 
-## Features
+The project covers user authentication, student management, event management, administrative dashboards, and audit logging.
 
-- **User Registration and Authentication:** User registration, secure password hashing, login, and logout.
-- **Session Management:** Session-based authentication, role-based access control, and inactivity timeout.
-- **Student Management:** Create, view, update, delete, search, and filter student records.
-- **Event Management:** Manage campus events and event poster uploads.
-- **JSON API:** Fetch/AJAX-based CRUD operations without reloading the page.
-- **Admin Dashboard:** Display project statistics and provide access to administrative features.
-- **Audit Logs:** Record and view administrative activity.
+## 2. Objectives
 
-## Technologies Used
+- Integrate the modules developed across Practicals 1–14.
+- Ensure navigation and application functionality work end-to-end.
+- Implement and verify authentication, sessions, roles, and input validation.
+- Verify database connectivity and CRUD operations.
+- Test AJAX/Fetch functionality.
+- Document installation, configuration, and testing.
+- Submit the source code and supporting files through GitHub.
+- Deploy and verify the application locally using XAMPP and Apache.
+
+## 3. Features
+
+- **User Registration:** Account creation, duplicate email checking, and password hashing.
+- **Authentication:** Login, logout, session management, and role-based access.
+- **Student Management:** Student CRUD operations, search, and filtering.
+- **Event Management:** Event CRUD operations and poster uploads with file validation.
+- **JSON API:** PHP API with AJAX/Fetch-based operations without full-page reloads.
+- **Admin Dashboard:** Administrative navigation and dynamic statistics.
+- **Audit Logs:** Recording and displaying administrative activities.
+- **Frontend Interactivity:** JavaScript validation, DOM manipulation, and Fetch API integration.
+
+## 4. Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
 - PHP
 - MySQL
-- XAMPP
+- XAMPP and Apache
 - Git and GitHub
+- Visual Studio Code
 
-## Project Structure
+## 5. Project Structure
+
 
 WDF-Practicals/
 ├── PRACTICAL-01/
@@ -57,55 +73,122 @@ WDF-Practicals/
 ├── PRACTICAL-12/
 ├── PRACTICAL-13/
 ├── PRACTICAL-14/
-└── README.md
+├── README.md
 
-Each practical folder contains the files associated with its respective exercise. File names and contents may vary.
+The structure above illustrates the intended submission layout. Keep only files and folders that actually exist in the repository, and include the relevant SQL export, test report, and screenshots.
 
-## Requirements
+## 6. Requirements
 
 - XAMPP with Apache and MySQL
 - A modern web browser
 - Visual Studio Code or another code editor
-- Git for version control
+- Git installed for repository management
 
-## Installation and Setup
+## 7. Installation and Local Deployment
 
 1. Install and open XAMPP.
 2. Start Apache and MySQL.
-3. Clone the repository or download the project from GitHub.
-4. Place the project folder inside XAMPP's `htdocs` directory.
+3. Clone the repository or download its source code from GitHub.
+4. Place the project folder inside the XAMPP `htdocs` directory.
 5. Open phpMyAdmin at [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/).
-6. Import or create the required databases and tables using the SQL files or schema prepared for the project.
-7. Check the database connection settings in the PHP configuration files.
-8. Open the required PHP pages through `http://localhost/WDF-Practicals/` or the appropriate local project URL, depending on the folder name.
-9. For static pages configured to use Live Server, start Live Server separately and open the corresponding HTML page.
+6. Create or import the databases and tables required by the project using the supplied SQL export.
+7. Check the PHP database connection settings and update them for your local MySQL configuration.
+8. Open the project through the appropriate `http://localhost/...` URL.
+9. For static HTML pages configured to use Live Server, start Live Server separately.
+10. Test the application in the browser and verify that its pages, database operations, and authentication work correctly.
 
-## Database Configuration
+**Note:** The exact URL depends on the folder name inside `htdocs`. Update the example URL if your local folder is named `WDF` rather than `WDF-Practicals`.
 
-The project uses MySQL databases for authentication, student records, event management, registrations, and audit logs.
+## 8. Database Configuration
 
-Before running the project, ensure that the required databases and tables exist and that the PHP connection settings match your local MySQL configuration.
+CampusCore uses MySQL for authentication, student records, events, registrations, and audit logs.
 
-**Security note:** Do not publish passwords, private credentials, or other sensitive configuration details in the repository.
+Before running the application:
 
-## Testing
+- Create all required databases and tables.
+- Import the SQL dump supplied with the submission.
+- Verify database names, usernames, passwords, and connection settings.
+- Confirm that the application can read and write records correctly.
 
-The following areas should be tested before submission:
+Do not commit real passwords or private credentials to GitHub.
 
-- User registration and login/logout
-- Session timeout and role-based permissions
-- Student management CRUD operations
-- Event management and poster uploads
-- JSON API and Fetch/AJAX operations
-- Dashboard statistics and audit logs
-- Database connectivity and navigation links
+## 9. Testing and Verification
 
-## Deployment
+The following checks must be performed before submission:
 
-The application is intended to run locally using XAMPP and MySQL. Verify that the complete application works correctly in the browser before submitting it.
+| Test Area | Verification |
+|---|---|
+| Navigation | All relevant pages and links open correctly |
+| Registration | Valid inputs are accepted and duplicate emails are handled |
+| Authentication | Login and logout work correctly |
+| Sessions and roles | Protected pages enforce the appropriate role |
+| Student management | Create, read, update, delete, search, and filter operations work |
+| Event management | Event operations and permitted poster uploads work |
+| JSON API | Fetch/AJAX requests return valid responses |
+| Database | Required tables and database operations work |
+| Admin dashboard | Statistics and administrative links work |
+| Audit logs | Relevant activity records are displayed correctly |
+| Security | Input validation, password hashing, and access checks are verified |
+| Accessibility | Labels, headings, image alternatives, and navigation are checked |
+| Deployment | Application runs locally using XAMPP and Apache |
 
-## Author
+Record the actual result of each test in the accompanying test report. Do not mark a test as passed until it has been performed.
 
-**Neel Patel**  
+## 10. Security and Accessibility Checklist
+
+- Passwords are stored using password hashing rather than plaintext.
+- Database queries use appropriate prepared statements.
+- Server-side validation is applied to relevant inputs.
+- Session and role checks protect restricted pages.
+- File uploads are validated.
+- Output is escaped where appropriate.
+- Forms have associated labels and useful validation messages.
+- Images have appropriate alternative text.
+- Navigation and interactive controls can be used clearly.
+
+## 11. GitHub Submission
+
+The final repository should contain:
+
+- Complete project source code
+- `README.md` with setup instructions
+- SQL database export
+- Test report with test cases and actual results
+- Screenshots of important application pages
+- Any other files required by the practical instructions
+
+Review the repository before submission and remove temporary files, debugging output, passwords, and sensitive credentials.
+
+**GitHub Repository:**  
+https://github.com/NeelPatel2407/WDF-Practicals
+
+## 12. Screenshots and Project Demo
+
+Capture screenshots of the actual running application, including relevant pages such as:
+
+- Login and registration
+- Student dashboard
+- Admin dashboard
+- Student management
+- Event management
+- Audit logs
+
+Demonstrate the integrated application, including authentication, database operations, role-based access, and other implemented features.
+
+## 13. Deployment Extension
+
+The practical list suggests local deployment using an Apache virtual host as an intermediate extension. An advanced extension is to deploy the frontend/static component online and document backend deployment limitations, or use PHP-compatible hosting.
+
+These extensions should be included only if they are actually completed.
+
+## 14. Learning Outcome
+
+This practical integrates the semester's web development work into a complete, documented, testable, and locally deployable full-stack application. It reinforces integration, testing, debugging, security, accessibility, documentation, and version control.
+
+## 15. Author
+
+**Name:** Neel Patel  
 **Enrollment No.:** 25DCS093  
-**Course:** ITUE203 – Web Development Frameworks
+**Institution:** DEPSTAR, CHARUSAT  
+**Course:** ITUE203 – Web Development Frameworks  
+**Academic Year:** 2026–27
